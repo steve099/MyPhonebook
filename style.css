@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
   margin: 0px;
   padding: 0px;
@@ -69,4 +70,77 @@ form, .content {
   background: #dff0d8; 
   border: 1px solid #3c763d;
   margin-bottom: 20px;
+=======
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-size: 110%;
+  background:url(bg.jpg);
+  background-repeat: no-repeat;
+      background-size: 100% 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.header {
+  width: 30%;
+  margin: 20px auto 0px;
+  color: white;
+  background:blue;
+  text-align: center;
+  border: 1px solid #B0C4DE;
+  border-bottom: none;
+  border-radius: 10px 10px 0px 0px;
+  padding: 20px;
+}
+form, .content {
+  width: 30%;
+  margin: 0px auto;
+  padding: 20px;
+  border: 1px solid #B0C4DE;
+  background: white;
+  border-radius: 0px 0px 10px 10px;
+}
+.input-group {
+  margin: 10px 0px 10px 0px;
+}
+.input-group label {
+  display: block;
+  text-align: left;
+  margin: 3px;
+}
+.input-group input {
+  height: 30px;
+  width: 93%;
+  padding: 2px 10px;
+  font-size: 16px;
+  border-radius: 2px;
+  border: 1px solid gray;
+}
+.btn {
+  padding: 10px;
+  font-size: 15px;
+  color: white;
+  background: pink;
+  border: none;
+  border-radius: 2px;
+}
+.error {
+  width: 92%; 
+  margin: 0px auto; 
+  padding: 10px; 
+  border: 1px solid #a94442; 
+  color: #a94442; 
+  background: #f2dede; 
+  border-radius: 2px; 
+  text-align: left;
+}
+.success {
+  color: #3c763d; 
+  background: #dff0d8; 
+  border: 1px solid #3c763d;
+  margin-bottom: 20px;
+>>>>>>> 3d2dd9b36205d55167b0d052f8abf2eaca0d0b3d
 }

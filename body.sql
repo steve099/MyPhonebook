@@ -1,4 +1,5 @@
 -- phpMyAdmin SQL Dump
+<<<<<<< HEAD
 -- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
@@ -6,6 +7,15 @@
 -- Generation Time: Jan 10, 2019 at 03:46 AM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
+=======
+-- version 4.8.4
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost
+-- Generation Time: Jan 09, 2019 at 08:11 AM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 7.3.0
+>>>>>>> 3d2dd9b36205d55167b0d052f8abf2eaca0d0b3d
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -34,14 +44,19 @@ CREATE TABLE `contacts` (
   `contact_lname` varchar(250) NOT NULL,
   `contact_nickname` varchar(250) NOT NULL,
   `contact_profile` text NOT NULL,
+<<<<<<< HEAD
   `contact_cphone` varchar(250) NOT NULL,
   `username` varchar(250) NOT NULL
+=======
+  `contact_cphone` varchar(250) NOT NULL
+>>>>>>> 3d2dd9b36205d55167b0d052f8abf2eaca0d0b3d
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `contacts`
 --
 
+<<<<<<< HEAD
 INSERT INTO `contacts` (`id`, `contact_fname`, `contact_lname`, `contact_nickname`, `contact_profile`, `contact_cphone`, `username`) VALUES
 (3, 'qwe', 'baluyos', 'wew', 'Myprofile.jpg', '12', ''),
 (4, 'ronil', 'cajan', 'ron', 'Screenshot from 2019-01-09 14-16-38.png', '0987654321', ''),
@@ -51,6 +66,11 @@ INSERT INTO `contacts` (`id`, `contact_fname`, `contact_lname`, `contact_nicknam
 (12, 'steve', 'bolodo', 'gwapo', 'Screenshot from 2019-01-09 14-00-23.png', '0987654321', 'cajan'),
 (13, 'wew', 'boang', 'siya', '', '123', 'cajan'),
 (14, 'ewr', 'steeve', 'wew', '', '123456', 'cajan');
+=======
+INSERT INTO `contacts` (`id`, `contact_fname`, `contact_lname`, `contact_nickname`, `contact_profile`, `contact_cphone`) VALUES
+(2, 'aw', 'qwe', 'fwffewf', 'facebook.png', '1231231234'),
+(3, 'qwe', 'baluyos', 'wew', 'Myprofile.jpg', '12');
+>>>>>>> 3d2dd9b36205d55167b0d052f8abf2eaca0d0b3d
 
 -- --------------------------------------------------------
 
@@ -72,8 +92,12 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
 (1, 'steve', 'steve@gmail.com', '202cb962ac59075b964b07152d234b70'),
 (2, 'cajan', 'cajanr02@gmail.com', '202cb962ac59075b964b07152d234b70'),
+<<<<<<< HEAD
 (3, 'baluyos', 'baluyos@gmail.com', '202cb962ac59075b964b07152d234b70'),
 (4, 'boang', 'aaa@gmail.com', '202cb962ac59075b964b07152d234b70');
+=======
+(3, 'baluyos', 'baluyos@gmail.com', '202cb962ac59075b964b07152d234b70');
+>>>>>>> 3d2dd9b36205d55167b0d052f8abf2eaca0d0b3d
 
 --
 -- Indexes for dumped tables
@@ -83,8 +107,12 @@ INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
 -- Indexes for table `contacts`
 --
 ALTER TABLE `contacts`
+<<<<<<< HEAD
   ADD PRIMARY KEY (`id`),
   ADD KEY `username` (`username`);
+=======
+  ADD PRIMARY KEY (`id`);
+>>>>>>> 3d2dd9b36205d55167b0d052f8abf2eaca0d0b3d
 
 --
 -- Indexes for table `users`
@@ -100,13 +128,21 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
+<<<<<<< HEAD
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+=======
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+>>>>>>> 3d2dd9b36205d55167b0d052f8abf2eaca0d0b3d
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
+<<<<<<< HEAD
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+=======
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+>>>>>>> 3d2dd9b36205d55167b0d052f8abf2eaca0d0b3d
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

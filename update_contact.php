@@ -1,9 +1,15 @@
 <?php 
 	require_once"connection.php";
 
+<<<<<<< HEAD
 	if (isset($_GET['edit'])) {
 		
 		$id = $_GET['edit'];
+=======
+	if (isset($_GET['id'])) {
+		
+		$id = $_GET['id'];
+>>>>>>> 3d2dd9b36205d55167b0d052f8abf2eaca0d0b3d
 
 		$get_contact = "select * from contacts where id = '$id'";
 
@@ -14,21 +20,32 @@
  ?>
  <?php 
 
+<<<<<<< HEAD
 	if (isset($_POST['submit'],$_GET['edit'])) {
 
 		$id = $_GET['edit'];
+=======
+	if (isset($_POST['submit'])) {
+
+		$id = $_POST['id'];
+
+>>>>>>> 3d2dd9b36205d55167b0d052f8abf2eaca0d0b3d
 		$fname = $_POST['fname'];
 		$lname = $_POST['lname'];
 		$nickname = $_POST['nickname'];
 		$profile = $_FILES['profile']['name'];
 		if ($profile != "") {
 			$profile_tmp = $_FILES['profile']['tmp_name'];
+<<<<<<< HEAD
 			move_uploaded_file($profile_tmp, "profile_images/$profile");
+=======
+>>>>>>> 3d2dd9b36205d55167b0d052f8abf2eaca0d0b3d
 		}else{
 			$profile = $row['contact_profile'];
 		}
 		$cphone = $_POST['cphone'];
 
+<<<<<<< HEAD
 		$query = "SELECT username FROM contacts WHERE id = '$id'";
 		$result = mysqli_query($conn,$query);
 		if(mysqli_num_rows($result)){
@@ -42,6 +59,16 @@
 				}
 		}
 
+=======
+		move_uploaded_file($profile_tmp, "profile_images/$profile");
+
+		$update_contact = "UPDATE contacts set contact_fname='$fname', contact_lname='$lname', contact_nickname='$nickname', contact_cphone='$cphone' where id = '$id'";
+
+		$sql_update_contact = $conn->query($update_contact);
+
+		if ($sql_update_contact == true) {
+			header("Location: index.php");
+>>>>>>> 3d2dd9b36205d55167b0d052f8abf2eaca0d0b3d
 		}
 	}
  ?>
@@ -65,7 +92,11 @@
 			<hr>
 			<div class="contact">
 				<div class="contact_insert">
+<<<<<<< HEAD
 					<form action="" method="post" enctype="multipart/form-data">
+=======
+					<form action="update_contact.php?id=<?php echo $row["id"]; ?>" method="post" enctype="multipart/form-data">
+>>>>>>> 3d2dd9b36205d55167b0d052f8abf2eaca0d0b3d
 						<table style="float:left" width="50%">
 							<input type="hidden" name="id" value="<?php echo $row["id"]; ?>">
 							<tr>
@@ -92,7 +123,11 @@
 						</table>
 						<div class="clear"></div>
 						<input class="insert_contact_button" type="submit" name="submit" value="Update Contact">
+<<<<<<< HEAD
 						<a href="index.php?username=<?php echo $row['username'];?>"><input class="cancel_contact_button" type="button" value="Cancel"></a>
+=======
+						<a href="index.php"><input class="cancel_contact_button" type="button" value="Cancel"></a>
+>>>>>>> 3d2dd9b36205d55167b0d052f8abf2eaca0d0b3d
 					</form>
 				</div>
 				<div class="clear"></div>

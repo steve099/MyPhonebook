@@ -4,7 +4,11 @@
 
 		$id = $_GET['id'];
 
+<<<<<<< HEAD
 		include_once"connection.php";
+=======
+		require_once"connection.php";
+>>>>>>> 3d2dd9b36205d55167b0d052f8abf2eaca0d0b3d
 
 		$contacts = array();
 
@@ -35,8 +39,12 @@
 		<!-- content section -->
 		<div class="content">
 				<div class="floatl"><h1><?php echo $contact["contact_fname"] . " " . $contact["contact_lname"]; ?></h1></div>
+<<<<<<< HEAD
 				<a class="floatr" href="index.php?username=<?php isset($_SESSION['username']); echo $_SESSION['username'];?>"><input class="cancel_contact_button" type="button" value="Home"></a>
 				
+=======
+				<a class="floatr" href="index.php"><input class="cancel_contact_button" type="button" value="Home"></a>
+>>>>>>> 3d2dd9b36205d55167b0d052f8abf2eaca0d0b3d
 				<div class="clear"></div>
 				<hr>
 				<div class="contact">
