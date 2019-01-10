@@ -1,17 +1,21 @@
 <?php 
 	
-	require_once"connection.php";
+	include_once("connection.php");
 	
-	if (isset($_GET['id'])) {
+	if (isset($_GET['delete'])) {
 		
-		$id = $_GET['id'];
+		$id = $_GET['delete'];
 
-		$contact_delete = "DELETE from contacts where id = '$id'";
+		$query = "SELECT username FROM contacts where id = '$id'";
 
-		$sql_contact_delete = $conn->query($contact_delete);
+		$result = mysqli_query($conn,$query);
 
-		header("Location: index.php");
-
+  	if (mysqli_num_rows($result) == 1) {
+  		while($row = mysqli_fetch_assoc($result)){
+  				mysqli_query($conn,"DELETE from contacts where id = '$id'");
+				header("location: index.php?username=".$row['username']);
+			}
+		}
 	}
 	
  ?>

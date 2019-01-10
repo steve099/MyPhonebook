@@ -2,7 +2,7 @@
 	session_start();
 	$host = "localhost";
 	$user = "root";
-	$pass ="kagebunshin1";
+	$pass ="";
 	$db   = "body";
 
 	$conn = mysqli_connect($host, $user, $pass, $db);
